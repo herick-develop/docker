@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  manutencao_app:
+    image: manutencao_app:latest
+    ports:
+      - "3006:3006"
+    networks:
+      - manutencao
+    container_name: manutencao_app
+
+  manutencao_api:
+    image: manutencao_api:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - manutencao
+    container_name: manutencao_api
+
+networks:
+  manutencao:
+    driver: bridge
+    name: manutencao
