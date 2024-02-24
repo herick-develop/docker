@@ -3,6 +3,7 @@ version: '3'
 services:
   manutencao_app:
     image: manutencao_app:latest
+    restart: always
     ports:
       - "3006:3006"
     networks:
@@ -11,6 +12,7 @@ services:
 
   manutencao_api:
     image: manutencao_api:latest
+    restart: always
     ports:
       - "3000:3000"
     networks:
